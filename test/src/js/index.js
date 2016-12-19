@@ -1,7 +1,12 @@
-import Vue from 'Vue'
-import Favlist from '../components/Favlist'
-
-new Vue({
-	el: 'body',
-	components: { Favlist }
+import Vue from 'vue'
+var app = new Vue({
+  el: '#app',
+  data: {
+    todos: [
+      { text: 'Learn JavaScript' },
+      { text: 'Learn Vue.js' },
+      { text: 'Build Something Awesome' }
+    ]
+  }
 })
+require("../sass/index.less");

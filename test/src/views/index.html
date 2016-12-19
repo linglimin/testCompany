@@ -4,10 +4,19 @@
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
 		<meta charset="utf-8">
 		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="//testvue.com/static/index.css">
 	</head>
 	<body>
 				111<!-- vue的组件以自定义标签的形式使用 -->
-		<favlist></favlist>
+		<!-- <favlist></favlist> -->
+		<div id="app">
+		<ul>
+		    <li v-for="todo in todos">
+		      {{ todo.text }}
+		    </li>
+		  </ul>
+		</div>
+  
 	</body>
-	<script type="text/javascript" src="../../asset/main.c88791b0a72d2673bbcf.js"></script>
+	<script type="text/javascript" src="//testvue.com/static/index.js"></script>
 </html>
