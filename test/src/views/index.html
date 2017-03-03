@@ -7,16 +7,35 @@
 		<link rel="stylesheet" type="text/css" href="//testvue.com/static/index.css">
 	</head>
 	<body>
-				111<!-- vue的组件以自定义标签的形式使用 -->
-		<!-- <favlist></favlist> -->
 		<div id="app">
-		<ul>
-		    <li v-for="todo in todos">
-		      {{ todo.text }}
-		    </li>
-		  </ul>
+			<ul v-bind:title="title">
+			    <li v-for="todo in todos">
+			      {{ todo.text }}
+			    </li>
+		  	</ul>
+			<h1 v-if="ok">Yes</h1>
+			<h1 v-else>No</h1>
+			<h1>{{title}}</h1>
+			<template v-if="ok">
+			  <h1>Title</h1>
+			  <p>Paragraph 1</p>
+			  <p>Paragraph 2</p>
+			</template>
+
+			<h1><template v-if="ok">Yes</template><template v-else>No</template></h1>
+			<h1 v-show="ok">Hello!</h1>
+			<template v-if="ok">
+			  <label>Username</label>
+			  <input placeholder="Enter your username" id="username-input">
+			</template>
+			<template v-else>
+			  <label>Email</label>
+			  <input placeholder="Enter your email address" id="email-input">
+			</template>
+
+  			<button v-on:click="reverseType">reverseType</button>
+  			<my-component></my-component>
 		</div>
-  
 	</body>
 	<script type="text/javascript" src="//testvue.com/static/index.js"></script>
 </html>
