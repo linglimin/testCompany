@@ -1,4 +1,4 @@
-import Vue from 'vue'
+var Vue = require('vue');
 
 Vue.component('my-component', {
   template: '<div>A custom component!</div>'
