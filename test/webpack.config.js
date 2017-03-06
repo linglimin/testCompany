@@ -79,6 +79,10 @@ module.exports = {
     ],
 
     resolve: {
-        modulesDirectories: ['.']
-    }
+        modulesDirectories: ['.', 'node_modules']
+    },
+
+    resolveLoader: {
+        modulesDirectories: ['.', 'node_modules']
+    },
 };

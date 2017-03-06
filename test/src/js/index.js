@@ -1,4 +1,5 @@
-var Vue = require('vue');
+//var Vue = require('vue');
+import Vue from 'vue';
 
 Vue.component('my-component', {
   template: '<div>A custom component!</div>'
@@ -22,4 +23,4 @@ var app1 = new Vue({
   }
 })
 app1.title=111;
-require("../sass/index.less");
+require("../sass/index.sass");
