@@ -31,18 +31,15 @@ module.exports = {
             // Extract css files
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader","autoprefixer-loader")
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader")
             },
-            // Optionally extract less files
-            // or any other compile-to-css language
             {
                 test: /\.less$/,
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
             },
             {
-              test:/\.(sass|scss)$/,
-                loader:ExtractTextPlugin.extract("style-loader",
-                    "css-loader?-autoprefixer!autoprefixer-loader!postcss-loader!sass-loader")
+                test:/\.(sass|scss)$/,
+                loader:ExtractTextPlugin.extract("style-loader","css-loader!autoprefixer-loader!sass-loader")
             },
             // You could also use other loaders the same way. I. e. the autoprefixer-loader
             {

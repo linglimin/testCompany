@@ -23,4 +23,4 @@ var app1 = new Vue({
   }
 })
 app1.title=111;
-require("../sass/index.sass");
+require("../sass/index.scss");

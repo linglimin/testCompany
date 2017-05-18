@@ -40,3 +40,4 @@ var server = http.createServer(function (request, response) {
 });
 server.listen(PORT);
 console.log("Server runing at port: " + PORT + ".");
+console.log("webpack runing at port: 2121.");
